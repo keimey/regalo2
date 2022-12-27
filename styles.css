@@ -1,3 +1,69 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+.mi-nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.mi-nav-link:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
